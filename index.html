@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>My Store</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <h3>FlipBasket</h3>
+        <h2>Featured Product</h2>
+
+        <input type="text" id="search" placeholder="Search Product...">
+
+        <p id="noResult" style="display: none;">No product found??</p>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            cart🛒(<span id="cartCount">0</span>)
+        </div>
+    </div>
+    <div class="banner">
+       
+    </div>
+    <div class="products" id="productContainer"></div>
+    <h1>FlipBasket</h1>
+
+
+    <div class="products">
+
+
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4IQaxFdtX9pQ_IXPqEk_N3QyLtB7oX3HCcdRD4aPhjG7law6O-BcTWqDqhjs&s"
+                alt>
+            <h3>Shoes</h3>
+            <p>₹999 <del>₹1,499</del></p>
+            <p>⭐⭐⭐⭐⭐(5)</p>
+            <p style="color:red;">20% OFF</p>
+            <p>Free delivery</p>
+            <div class="btns">
+                <button>Buy Now</button>
+                <button onclick="addToCart('Shoes',999)">AddToCart</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7MTYqNX1VxljoXNFWFRBiVJxO6-2RFYNZeU3IOyV780J50ZtRtBg45g9oIg&s"
+                alt>
+            <h3>Shirt</h3>
+            <p>₹899 <del>₹1,699</del></p>
+            <p>⭐⭐⭐⭐☆ (4.3)</p>
+            <p style="color:red;">70% OFF</p>
+            <p>Free delivery</p>
+            <div class="btns">
+                <button>Buy Now</button>
+                <button onclick="addToCart('Shirt',899)">AddToCart</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw06F51QHlwUONZJIJ_3dOzdxBrElgAbxTNVj_h9wDkx7872XktnqSSRrCGKM&s"
+                alt>
+            <h3>T Shirt</h3>
+            <p>₹699 <del>₹1,299</del></p>
+            <p>⭐⭐⭐☆☆ (3.2)</p>
+            <p style="color:red;">50% OFF</p>
+            <p>Free delivery</p>
+            <div class="btns">
+                <button>Buy Now</button>
+                <button onclick="addToCart('T Shirt',699)">AddToCart</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSakCzgzYCNzAv2mnBzVjiP6meV9z14cyVn20WthG1yyFLvreOxWOxTD66euw&s"
+                alt>
+            <h3>Jeans</h3>
+            <p>₹999 <del>₹1,899</del></p>
+            <p>⭐⭐⭐⭐☆ (4.2)</p>
+            <p style="color:red;">50% OFF</p>
+            <p>Free delivery</p>
+            <div class="btns">
+                <button>Buy Now</button>
+                <button onclick="addToCart('T Shirt',699)">AddToCart</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvCPOFr1EyKAOwD9jqHnJe5dycEvTb-vjnDYRejtXVx5oQkb-pw9oZQBUlR3E&s"
+                alt>
+            <h3>Headphones</h3>
+            <p>₹1,999 <del>₹1,899</del></p>
+            <p>⭐⭐⭐⭐⭐ (5)</p>
+            <p style="color:red;">18% OFF</p>
+            <p>Free delivery</p>
+            <div class="btns">
+                <button>Buy Now</button>
+                <button onclick="addToCart('Headphones',1999)">AddToCart</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEA5DHJi4gqSN_BwWaxiqSa1KLzmv04vb-RQH-s6xBU6Jjx5WKofjqIsdbd4U&s
+                alt>
+            <h3>Nickbend</h3>
+            ₹999 <del>₹1,199</del>
+            <p>⭐⭐⭐⭐☆ (4.5)</p>
+            <p style="color:red;">25% OFF</p>
+            <p>Free delivery</p>
+            <div class="btns">
+                <button>Buy Now</button>
+                <button onclick="addToCart('Nickbend',999)">AddToCart</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDwVFdKo_Jy0YHOaWuL_ZpnclKvuhX1BbDRFqDC85FKnlzpMxvtmmlj_zZqw&s"
+                alt>
+            <h3>Speakers</h3>
+            ₹1,699 <del>₹3,499</del>
+            <p>⭐⭐⭐☆☆ (3.4)</p>
+            <p style="color:red;">25% OFF</p>
+            <p>Free delivery</p>
+            <div class="btns">
+                <button>Buy Now</button>
+                <button onclick="addToCart('Speakers',1699)">AddToCart</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrn46pY06v6iluwIAQg249O7AmPMF6dob4ZaAINYBJAjdTNCTYszxbkoc9VrQ&s
+                alt>
+            <h3>Phones</h3>
+            ₹16,999 <del>₹25,999</del>
+            <p>⭐⭐⭐⭐⭐ (5)</p>
+            <p style="color:red;">12% OFF</p>
+            <p>Free delivery</p>
+            <div class="btns">
+                <button>Buy Now</button>
+                <button onclick="addToCart('Phones',16999)">AddToCart</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlLGFGozPE6DEx8BMwhcinYr9ZYOcxf6fMY0qJivu8MAo8EGR5neNm0n1WmeM&s"
+                alt>
+            <h3>Laptops</h3>
+            ₹32,999 <del>₹54,999</del>
+            <p>⭐⭐⭐⭐☆ (4.7)</p>
+            <p style="color:red;">15% OFF</p>
+            <p>Free delivery</p>
+            <div class="btns">
+                <button>Buy Now</button>
+                <button onclick="addToCart('Laptops',32999)">AddToCart</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjVrI-Cov2r1c9e3phEVjLuGmVyjVDH9YPtzBPx5ErBM9N5fySCVGmGFE-ZA&s"
+                alt>
+            <h3>Tablets</h3>
+            ₹12,999 <del>₹21,499</del>
+            <p>⭐⭐⭐⭐☆ (4.1)</p>
+            <p style="color:red;">35% OFF</p>
+            <p>Free delivery</p>
+            <div class="btns">
+                <button>Buy Now</button>
+                <button onclick="addToCart('Tablets',12999)">AddToCart</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsFESp0jQh9QgwbZApcm_RV42fGHH--f0ED6MwfVwqGWP8HayXKQcu2TjWAQU&s"
+                alt>
+            <h3>glasses</h3>
+            ₹1,299 <del>₹1,699</del>
+            <p>⭐⭐⭐⭐☆ (4.6)</p>
+            <p style="color:red;">25% OFF</p>
+            <p>Free delivery</p>
+            <div class="btns">
+                <button>Buy Now</button>
+                <button onclick="addToCart('glasses',1299)">AddToCart</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpCFDH2bvhfsJeEHaWcto-aaqUfOS2jDZ45nMhGociwLcPX7gW9j6RrQcfVQ0&s"
+                alt>
+            <h3>wallets</h3>
+            ₹499 <del>₹1,199</del>
+            <p>⭐⭐⭐☆☆ (3.7)</p>
+            <p style="color:red;">65% OFF</p>
+            <p>Free delivery</p>
+            <div class="btns">
+                <button>Buy Now</button>
+                <button onclick="addToCart('wallets',499)">AddToCart</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0tabiGFiTahmGUyG2lsp-r_DqV-E-tD7vJJfnMB5uJND9eL-TzrVRw94EeQ&s"
+                alt>
+            <h3>Bags</h3>
+            ₹699 <del>₹1,499</del>
+            <p>⭐⭐⭐⭐☆ (4.4)</p>
+            <p style="color:red;">25% OFF</p>
+            <p>Free delivery</p>
+            <div class="btns">
+                <button>Buy Now</button>
+                <button onclick="addToCart('Bags',699)">AddToCart</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY5KH8jbPkgYxVd_E0t3jDHv6lo3eJqrobqp3RHAmJclBMvH_Gti5vzq2AHhU&s"
+                alt>
+            <h3>Watches</h3>
+            ₹2,999 <del>₹3,499</del>
+            <p>⭐⭐⭐⭐☆ (4.1)</p>
+            <p style="color:red;">15% OFF</p>
+            <p>Free delivery</p>
+            <div class="btns">
+                <button>Buy Now</button>
+                <button onclick="addToCart('Watches',2999)">AddToCart</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5o3sqUY3m9EET-IGLOpSS9Lt0_eiSbkz9BfiP9lsPYIWSuiB--9Cginb01A&s"
+                alt>
+            <h3>Perfumes</h3>
+            ₹999 <del>₹1,699</del>
+            <p>⭐⭐⭐☆☆ (3.8)</p>
+            <p style="color:red;">22% OFF</p>
+            <p>Free delivery</p>
+            <div class="btns">
+                <button>Buy Now</button>
+                <button onclick="addToCart('Perfumes',999)">AddToCart</button>
+            </div>
+        </div>
+        <footer>
+            <p>&copy;FlipBasket...All Right Reserved.</p>
+            <p>Email: anshExample@email.com</p>
+        </footer>
+        <div id="toast"></div>
+
+        <script src="script.js"></script>
+</body>
+
+</html>

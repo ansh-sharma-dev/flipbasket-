@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="cart.css">
+    <title>My Cart🛒</title>
+</head>
+
+<body>
+
+    <h1 class="cart-title">My Cart🛒</h1>
+    <div id="cartitems"></div>
+    <p id="total"></p>
+    <script src="script.js"></script>
+    <script>
+        let div = document.createElement("div");
+        div.classList.add("cart-item");
+        //ye cart ka logic hai 
+        let cart =
+            JSON.parse(localStorage.getItem("cart")) || [];
+
+        let container =
+            document.getElementById("cartitems");
+        container.innerHTML = "";
+
+        let total = 0;
+
+        cart.forEach((item, index) => {
+            let price = item.price * item.quantity;
+            total += price;
+
+            let div = document.createElement("div");
+
+            //ye niche bale code button ko show karayenge jese +,- and remove
+            div.innerHTML = `
+         <div class="cart-info">
+            <h3>${item.name}</h3>
+            <p>₹${price}</p>
+         </div>
+     
+     <div class="Qty-buttons">
+        
+        <button onclick="changeQty(${index},-1)"</button>
+
+           
+            <button onclick="changeQty(${index},-1)">-</button>
+        
+            <span>${item.quantity}</span>
+            <button onclick="changeQty(${index},1)">+</button>
+
+
+            <button class="remove-btn"
+            onclick="removeitem(${index})">Remove</button>
+     </div>
+    `
+            // total price dikhayega ye line
+            document.getElementById("total")
+                .innerText = "Total: ₹" + total;
+
+
+            if (cart.length === 0) {
+                container.innerHTML = `
+                    <h2>your cart is empty 🛒</h2>
+                    ;`
+                return;
+            }
+
+
+            container.appendChild(div);
+        });
+
+    </script>
+</body>
+
+</html>
