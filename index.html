@@ -6,12 +6,16 @@
     <title>My Store</title>
 </head>
 
+
+
 <body>
     <div class="navbar">
         <h3>FlipBasket</h3>
         <h2>Featured Product</h2>
 
+        
         <input type="text" id="search" placeholder="Search Product...">
+
 
         <p id="noResult" style="display: none;">No product found??</p>
 
@@ -19,7 +23,11 @@
             <a href="#">Home</a>
             <a href="#">About</a>
             <a href="#">Contact</a>
-            cart🛒(<span id="cartCount">0</span>)
+            <a href="cart.html" class="cart-btn">
+                cart🛒(<span id="cartCount">0</span>)
+            </a>
+            <button id="themebtn"
+            onclick="toggleTheme()">🌙</button>
         </div>
     </div>
     <div class="banner">
@@ -227,9 +235,11 @@
                 <button onclick="addToCart('Perfumes',999)">AddToCart</button>
             </div>
         </div>
+        <div class="noResult" style="display: none;">
+            No Product Found
+        </div>
         <footer>
-            <p>&copy;FlipBasket...All Right Reserved.</p>
-            <p>Email: anshExample@email.com</p>
+            <p>&copy;2026 FlipBasket | Created By Ansh Sharma</p>
         </footer>
         <div id="toast"></div>
 

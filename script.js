@@ -1,5 +1,3 @@
-//ka istemaal bass logic(function) likhne ke kaam ata hai 
-
 function addToCart(name, price) {
   let cart =
     JSON.parse(localStorage.getItem("cart")) || [];
@@ -14,26 +12,31 @@ function addToCart(name, price) {
   updateCartCount();
   showToast(name + "added");
 }
-//naya product cart me ayega to cart update ho jayega uska logic
+
 function updateCartCount() {
   let cart =
     JSON.parse(localStorage.getItem("cart")) || [];
-  document.getElementById("cartCount").innerText = cart.length;
-}
+  let count = 0;
 
-//jab hum kisi product ko cart me dalenge to ek massage ayega uska logic hai
+  cart.forEach(item => {
+    count += item.quantity;
+  })
+  document.getElementById("cartCount").innerText = count;
+}
+updateCartCount();
+
 function showToast(msg) {
   let toast = document.getElementById("toast");
-
   toast.innerText = msg;
   toast.style.display = "block"
 
   setTimeout(() => {
     toast.style.display = "none";
   }, 2000);
+
+  showToast("Product Added To Cart");
 }
 
-//-+ button ka logic hai bhut inpotent hai.................
 function changeQty(index, value) {
   let cart =
     JSON.parse(localStorage.getItem("cart")) || [];
@@ -45,7 +48,7 @@ function changeQty(index, value) {
   localStorage.setItem("cart", JSON.stringify(cart));
   location.reload();
 }
-//ye remove button ka logic hai bhut inpotent.................
+
 function removeItem(index) {
   let cart =
     JSON.parse(localStorage.getItem("cart")) || [];
@@ -56,25 +59,15 @@ function removeItem(index) {
   location.reload();
 }
 
-//ye searching ke liye logic hai bhut inportent.................
-let search =
-document.getElementById("search");
+function toggleTheme() {
+  document.body.classList.toggle("dark")
+}
 
-search.addEventListener("input",function(){
-
-  let value = this.value.toLowerCase();
-  
-  let ptoducts =
-  document.querySelectorAll(".product");
-
-  let productName =
-  product.querySelector("h3").innerText.toLowerCase();
-
-  if(productName.iclude(value)){
-    product.style.display ="block";
-  }
-  else
-  {
-    product.style.display ="none";
-  }
+cart.forEach((Item, index) => {
+  // cart display code 
 });
+function removeItem(index) {
+  cart.splice(index, 1);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  displayCart();
+}

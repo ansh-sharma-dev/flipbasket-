@@ -40,32 +40,29 @@
      
      <div class="Qty-buttons">
         
-        <button onclick="changeQty(${index},-1)"</button>
-
-           
             <button onclick="changeQty(${index},-1)">-</button>
         
             <span>${item.quantity}</span>
+
             <button onclick="changeQty(${index},1)">+</button>
 
-
             <button class="remove-btn"
-            onclick="removeitem(${index})">Remove</button>
+            onclick="removeItem(${index})">Remove</button>
      </div>
-    `
+    ;`
+            container.appendChild(div);
+
+
+
             // total price dikhayega ye line
             document.getElementById("total")
                 .innerText = "Total: ₹" + total;
-
-
             if (cart.length === 0) {
                 container.innerHTML = `
                     <h2>your cart is empty 🛒</h2>
                     ;`
                 return;
             }
-
-
             container.appendChild(div);
         });
 

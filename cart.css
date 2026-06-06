@@ -9,7 +9,6 @@ body {
     flex-direction: column;
     gap: 20px;
 }
-
 .cart-item {
     display: flex;
     align-items: center;
